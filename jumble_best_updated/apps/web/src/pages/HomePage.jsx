@@ -33,7 +33,7 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Jumble.best - Unscramble Words Like a Pro</title>
+        <title>Jumble.best - Your Secret Weapon for Scrabble, Wordle & Words with Friends</title>
         <meta name="description" content="Solve word puzzles, unscramble letters, find anagrams, and get crossword help with our vibrant tools. Unscramble like a pro, solve it with color!" />
       </Helmet>
 
