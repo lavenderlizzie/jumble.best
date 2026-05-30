@@ -228,60 +228,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Random Question Feature Section */}
-        <section className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/10 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-accent/20 mb-6 shadow-inner rotate-3">
-                <Lightbulb className="w-10 h-10 text-accent -rotate-3" />
-              </div>
-              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
-                Take a Break
-              </h2>
-              <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
-                Need a mental break from puzzles? Generate a random question to ponder. Choose between silly fun or thoughtful reflection.
-              </p>
-            </motion.div>
-            <div className="max-w-4xl mx-auto">
-              <RandomQuestion />
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-16 flex justify-center"
-            >
-              <GrandmaMascot message="These questions are a wonderful way to spark conversation with family and friends. Give it a try!" position="right" />
-            </motion.div>
-          </div>
-        </section>
-
-        {/* About Our Players Section */}
-        <section id="about-our-players" className="py-24 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
-                About Our Players
-              </h2>
-              <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
-                Our community is made up of word puzzle enthusiasts, Scrabble champions, and everyday players who love a good challenge. Join thousands of others who use Jumble.best daily!
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* ── OUR DICTIONARY SECTION ── */}
         <section className="py-24 bg-muted/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,6 +291,60 @@ function HomePage() {
                   <p className="body-text text-muted-foreground font-bold text-lg">{stat.label}</p>
                 </div>
               ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* About Our Players Section */}
+        <section id="about-our-players" className="py-24 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
+                About Our Players
+              </h2>
+              <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
+                Our community is made up of word puzzle enthusiasts, Scrabble champions, and everyday players who love a good challenge. Join thousands of others who use Jumble.best daily!
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Random Question Feature Section */}
+        <section className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/10 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-accent/20 mb-6 shadow-inner rotate-3">
+                <Lightbulb className="w-10 h-10 text-accent -rotate-3" />
+              </div>
+              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
+                Take a Break
+              </h2>
+              <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
+                Need a mental break from puzzles? Generate a random question to ponder. Choose between silly fun or thoughtful reflection.
+              </p>
+            </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <RandomQuestion />
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-16 flex justify-center"
+            >
+              <GrandmaMascot message="These questions are a wonderful way to spark conversation with family and friends. Give it a try!" position="right" />
             </motion.div>
           </div>
         </section>
