@@ -13,6 +13,7 @@ function Header() {
     { path: '/how-it-works', label: 'How It Works' },
     { path: '/about', label: 'About' },
     { path: '/about-our-players', label: 'About Our Players' },
+    { path: '/dictionary', label: 'Dictionary' },
     { path: '/faq', label: 'FAQ' },
     { path: '/faq', label: 'Feedback', hash: '#feedback' },
   ];
