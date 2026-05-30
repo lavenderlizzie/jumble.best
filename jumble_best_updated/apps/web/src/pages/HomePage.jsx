@@ -138,7 +138,7 @@ function HomePage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">Boomers & Word Nerds!</span>
               </h1>
               <h3 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-10 leading-snug">
-                Unscramble like a Pro for Scrabble & Wordle
+                Built for Scrabble Lovers, Wordle Fans & Words with Friends Champions
               </h3>
               <p className="body-text text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
                 Your companion for word puzzles and anagrams.
