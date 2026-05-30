@@ -315,7 +315,7 @@ function HomePage() {
         </section>
 
         {/* Random Question Feature Section */}
-        <section className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/10 relative overflow-hidden">
+        <section id="random-questions" className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/10 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
