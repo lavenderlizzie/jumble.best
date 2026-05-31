@@ -32,20 +32,20 @@ function Header() {
               <div className="w-11 h-11 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(var(--primary),0.4)] shrink-0">
                 <span className="text-2xl font-black text-primary-foreground brand-text">J</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="brand-text text-xl md:text-2xl font-black text-foreground hidden sm:block">
+              <div className="flex flex-col items-start">
+                <span className="brand-text text-xl md:text-2xl font-black text-foreground hidden sm:block leading-tight">
                   Jumble.best
                 </span>
-                <span className="inline-block text-xs font-bold bg-primary text-primary-foreground px-2 py-0.5 rounded-full uppercase tracking-wide">
+                <span className="inline-block text-xs font-bold bg-primary text-primary-foreground px-2 py-0.5 rounded-full uppercase tracking-wide hidden sm:inline-block">
                   Beta
                 </span>
               </div>
             </Link>
-            <div className="flex items-end self-end pb-0 ml-4 shrink-0">
+            <div className="flex items-end self-end ml-2 shrink-0">
               <img
                 src="https://horizons-cdn.hostinger.com/9d0685b6-6057-4d84-99e1-dcfefe1c18f1/947c65278b32eda2302b918e33c4a7aa.png"
                 alt="Kalamity Kate"
-                className="h-[119px] md:h-[149px] w-auto object-contain origin-bottom"
+                className="h-[95px] md:h-[115px] w-auto object-contain origin-bottom"
               />
             </div>
           </div>
