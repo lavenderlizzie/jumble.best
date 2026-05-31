@@ -21,7 +21,7 @@ function Footer() {
               </span>
             </div>
             <p className="body-text text-base text-muted-foreground leading-relaxed max-w-sm">
-              Unscramble words, solve anagrams, and have fun with our boomer-friendly word tools. Made to bring joy to your puzzles.
+              Unscramble words, solve anagrams, and have fun with our boomer-friendly word tools. Made to keep your brain young and vital.
             </p>
           </div>
 
