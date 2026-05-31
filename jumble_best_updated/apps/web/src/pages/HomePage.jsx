@@ -297,7 +297,7 @@ function HomePage() {
 
         {/* About Our Players Section */}
         <section id="about-our-players" className="py-24 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -307,9 +307,28 @@ function HomePage() {
               <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
                 About Our Players
               </h2>
-              <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
-                Our community is made up of word puzzle enthusiasts, Scrabble champions, and everyday players who love a good challenge. Join thousands of others who use Jumble.best daily!
+              <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium mb-10">
+                We're a community of word lovers — retired teachers, Scrabble champions, crossword addicts, and everyday players who believe a sharp mind is the best accessory at any age. Whether you play to win or just to keep the brain buzzing, you belong here.
               </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                {[
+                  { emoji: '🏆', title: 'Scrabble Champions', desc: 'Serious players who demand a serious dictionary.' },
+                  { emoji: '🧩', title: 'Puzzle Enthusiasts', desc: 'Daily Wordle solvers, crossword devotees, and jumble fans.' },
+                  { emoji: '🧠', title: 'Brain Keepers', desc: 'People who know that keeping the mind active is the best medicine.' },
+                ].map((card) => (
+                  <div key={card.title} className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm">
+                    <div className="text-4xl mb-3">{card.emoji}</div>
+                    <h3 className="font-black text-foreground text-lg mb-2">{card.title}</h3>
+                    <p className="body-text text-muted-foreground text-base">{card.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                to="/about-our-players"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-black text-lg rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                Meet Our Community <ArrowRight className="w-5 h-5" />
+              </Link>
             </motion.div>
           </div>
         </section>
