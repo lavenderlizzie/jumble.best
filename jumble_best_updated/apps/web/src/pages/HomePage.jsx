@@ -176,6 +176,9 @@ function HomePage() {
                 <p className="body-text opacity-80 mt-2 text-lg">
                   Kalamity Kate's cheat sheet — hints, fun facts & KK's seal of approval!
                 </p>
+                <p className="body-text opacity-90 mt-3 text-base font-bold">
+                  🔖 Bookmark this site — next month's free download: <span className="underline underline-offset-2">"The 5-Letter Wordle Power Atlas."</span> A new download every month!
+                </p>
               </div>
               <Link
                 to="/faq#download"
@@ -368,7 +371,7 @@ function HomePage() {
           </div>
         </section>
 
-        <HelpSection />
+        <div id="help"><HelpSection /></div>
 
         {/* CTA Section */}
         <section className="py-24 bg-primary text-primary-foreground mt-auto relative overflow-hidden">
