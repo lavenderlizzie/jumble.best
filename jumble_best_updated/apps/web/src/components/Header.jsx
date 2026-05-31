@@ -37,6 +37,8 @@ function Header() {
               <span className="inline-block text-xs font-bold bg-primary text-primary-foreground px-2 py-0.5 rounded-full uppercase tracking-wide">
                 Beta
               </span>
+            </div>
+            <div className="ml-4">
               <LogoMascot />
             </div>
           </Link>
