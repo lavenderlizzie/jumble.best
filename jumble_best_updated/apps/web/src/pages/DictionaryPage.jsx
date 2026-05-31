@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { BookOpen, Search, Star, Zap, Globe } from 'lucide-react';
+import { BookOpen, Star, Zap, Globe } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import GrandmaMascot from '@/components/GrandmaMascot.jsx';
@@ -125,15 +125,6 @@ const stats = [
 ];
 
 function DictionaryPage() {
-  const [search, setSearch] = useState('');
-
-  const filtered = categories.filter(
-    cat =>
-      cat.label.toLowerCase().includes(search.toLowerCase()) ||
-      cat.desc.toLowerCase().includes(search.toLowerCase()) ||
-      cat.examples.some(w => w.includes(search.toLowerCase()))
-  );
-
   return (
     <>
       <Helmet>
@@ -203,36 +194,11 @@ function DictionaryPage() {
           </div>
         </section>
 
-        {/* Search */}
-        <section className="py-12">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="relative"
-            >
-              <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <input
-                type="text"
-                placeholder="Search categories or example words..."
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                className="w-full pl-14 pr-6 py-4 rounded-2xl border-2 border-border bg-card text-foreground font-medium text-lg focus:outline-none focus:border-primary transition-colors duration-200 shadow-sm"
-              />
-            </motion.div>
-          </div>
-        </section>
-
         {/* Category Cards */}
         <section className="pb-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {filtered.length === 0 ? (
-              <p className="text-center text-muted-foreground text-xl py-12">No categories found for "{search}"</p>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filtered.map((cat, i) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {categories.map((cat, i) => (
                   <motion.div
                     key={cat.label}
                     initial={{ opacity: 0, y: 30 }}
@@ -263,8 +229,7 @@ function DictionaryPage() {
                     </div>
                   </motion.div>
                 ))}
-              </div>
-            )}
+            </div>
           </div>
         </section>
 
