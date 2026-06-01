@@ -138,19 +138,11 @@ function FAQPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 h-16 px-10 text-xl font-bold rounded-2xl bg-primary text-primary-foreground shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 active:scale-[0.98]"
               >
-                <Download className="w-6 h-6" />
-                Download the Cheat Sheet — It's Free!
-              </a>
-              <p className="text-sm text-muted-foreground mt-5">
-                2 pages · Print-friendly · No sign-up · Works on any device
-                <p className="text-sm font-bold text-primary mt-2">
-                  <p className="text-sm text-muted-foreground mt-5">
+<p className="text-sm text-muted-foreground mt-5">
   2 pages · Print-friendly · No sign-up · Works on any device
 </p>
 
 <p className="text-sm font-bold text-primary mt-2">
-  🗓️ A New Release Every Month!
-</p>
   🗓️ A New Release Every Month!
 </p>
               </p>
