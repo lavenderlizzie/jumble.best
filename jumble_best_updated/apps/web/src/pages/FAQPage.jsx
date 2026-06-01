@@ -39,9 +39,11 @@ answer: 'It\'s a lively way to take a mental break from puzzles. Generate silly 
 question: 'Why is the design so colorful?',
 answer: 'We believe word puzzles shouldn\'t be boring! Our vibrant, saturated color scheme is designed to boost energy, improve focus, and make the solving experience joyful.'
 }];
+
 const toggleFAQ = index => {
 setOpenIndex(openIndex === index ? null : index);
 };
+
 return <>
 <Helmet>
 <title>Jumble.best - FAQ & Feedback</title>
@@ -55,7 +57,6 @@ return <>
 <section className="py-24 bg-gradient-to-br from-primary/15 via-background to-secondary/15 relative overflow-hidden">
 <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl -translate-y-1/2 translate-x-1/2" />
 <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full mix-blend-multiply filter blur-3xl translate-y-1/2 -translate-x-1/2" />
-
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
 <div className="flex items-center justify-center gap-4 mb-8">
@@ -109,43 +110,68 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 
 {/* ── FREE DOWNLOAD SECTION ── */}
 <section id="download" className="py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<motion.div
-initial={{ opacity: 0, y: 30 }}
-whileInView={{ opacity: 1, y: 0 }}
-viewport={{ once: true }}
-transition={{ duration: 0.6 }}
-className="bg-card rounded-3xl border-2 border-primary/30 shadow-xl shadow-primary/10 p-8 md:p-12 text-center"
->
-<div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-primary text-primary-foreground mb-6 shadow-xl shadow-primary/30 -rotate-3">
-<Download className="w-10 h-10 rotate-3" />
+<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="flex flex-col lg:flex-row items-center gap-12">
+
+  {/* Download Card */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    className="flex-1 bg-card rounded-3xl border-2 border-primary/30 shadow-xl shadow-primary/10 p-8 md:p-12 text-center"
+  >
+    <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-primary text-primary-foreground mb-6 shadow-xl shadow-primary/30 -rotate-3">
+      <Download className="w-10 h-10 rotate-3" />
+    </div>
+    <h2 className="hero-heading text-3xl md:text-5xl font-black text-foreground mb-4">
+      Free Download! 🧩
+    </h2>
+    <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto mb-3 font-medium">
+      <strong>Kalamity Kate's Top 50 Jumble Words That Fool Everyone</strong>
+    </p>
+    <p className="body-text text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+      Your 2-page cheat sheet with the trickiest Jumble words, solver hints, and fun facts about the puzzle game you love — totally free, no sign-up needed!
+    </p>
+    <a
+      href={PDF_URL}
+      download="Top50JumbleWords_KalamityKate.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-3 h-16 px-10 text-xl font-bold rounded-2xl bg-primary text-primary-foreground shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 active:scale-[0.98]"
+    >
+      <Download className="w-6 h-6" />
+      Download the Cheat Sheet — It's Free!
+    </a>
+    <p className="text-sm text-muted-foreground mt-5">
+      2 pages · Print-friendly · No sign-up · Works on any device
+    </p>
+    <p className="text-sm font-bold text-primary mt-2">
+      🗓️ A New Release Every Month!
+    </p>
+  </motion.div>
+
+  {/* Kalamity Kate */}
+  <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    className="hidden lg:flex flex-col items-center gap-4 flex-shrink-0"
+  >
+    <div className="relative bg-accent text-accent-foreground px-5 py-3 rounded-3xl shadow-xl max-w-[220px] text-center font-bold text-sm border-2 border-accent-foreground/10">
+      "Go on, download it — Kalamity Kate approves!"
+      <div className="absolute -bottom-3 left-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[14px] border-t-accent border-r-[12px] border-r-transparent drop-shadow-md" />
+    </div>
+    <img
+      src="https://horizons-cdn.hostinger.com/9d0685b6-6057-4d84-99e1-dcfefe1c18f1/947c65278b32eda2302b918e33c4a7aa.png"
+      alt="Kalamity Kate"
+      className="h-[260px] w-auto object-contain drop-shadow-xl"
+    />
+    <p className="text-sm font-bold text-muted-foreground tracking-widest uppercase">Kalamity Kate</p>
+  </motion.div>
+
 </div>
-<h2 className="hero-heading text-3xl md:text-5xl font-black text-foreground mb-4">
-Free Download! 🧩
-</h2>
-<p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto mb-3 font-medium">
-<strong>Kalamity Kate's Top 50 Jumble Words That Fool Everyone</strong>
-</p>
-<p className="body-text text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-Your 2-page cheat sheet with the trickiest Jumble words, solver hints, and fun facts about the puzzle game you love — totally free, no sign-up needed!
-</p>
-<a
-href={PDF_URL}
-download="Top50JumbleWords_KalamityKate.pdf"
-target="_blank"
-rel="noopener noreferrer"
-className="inline-flex items-center gap-3 h-16 px-10 text-xl font-bold rounded-2xl bg-primary text-primary-foreground shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 active:scale-[0.98]"
->
-<Download className="w-6 h-6" />
-Download the Cheat Sheet — It's Free!
-</a>
-<p className="text-sm text-muted-foreground mt-5">
-2 pages · Print-friendly · No sign-up · Works on any device
-</p>
-<p className="text-sm font-bold text-primary mt-2">
-🗓️ A New Release Every Month!
-</p>
-</motion.div>
 </div>
 </section>
 
