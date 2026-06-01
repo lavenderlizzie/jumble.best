@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 
 export default function Stopwatch() {
@@ -38,7 +39,7 @@ export default function Stopwatch() {
         </button>
         <button
           onClick={reset}
-          className="px-5 py-2 rounded-xl bg-muted text-muted-foreground font-bold text-base hover:bg-muted/70 transition-all"
+          className="px-5 py-2 rounded-xl bg-secondary text-secondary-foreground font-bold text-base hover:bg-secondary/90 transition-all"
         >
           Reset
         </button>
@@ -46,4 +47,3 @@ export default function Stopwatch() {
     </div>
   );
 }
-
