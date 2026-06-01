@@ -40,11 +40,11 @@ function HomePage() {
 
       <div className="min-h-screen bg-background flex flex-col">
 
-        {/* Absolute Top: Unscrambler Input Section */}
+        {/* Unscrambler Input Section */}
         <div className="bg-gradient-to-b from-primary/10 via-background to-background border-b border-border/50 pt-16 pb-12 relative z-10 mt-10">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
-            {/* Kalamity Kate Mascot & Speech Bubble */}
+            {/* Speech Bubble + SVG Mascot */}
             <div className="absolute -top-28 right-0 md:-right-20 flex flex-col items-end z-20 hidden sm:flex pointer-events-none">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 10, rotate: 5 }}
@@ -55,7 +55,6 @@ function HomePage() {
                 "Well, that's either a typo...or ancient Viking."
                 <div className="absolute -bottom-3 right-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[14px] border-t-accent border-r-[12px] border-r-transparent drop-shadow-md" />
               </motion.div>
-
               <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -93,7 +92,6 @@ function HomePage() {
                 <span className="font-bold text-card-foreground text-lg tracking-tight">Newbies - Here's what you need to know</span>
                 {showNewbies ? <ChevronUp className="w-6 h-6 text-muted-foreground ml-auto" /> : <ChevronDown className="w-6 h-6 text-muted-foreground ml-auto" />}
               </button>
-
               <AnimatePresence>
                 {showNewbies && (
                   <motion.div
@@ -128,10 +126,20 @@ function HomePage() {
 
         <Header />
 
-        {/* Hero Section */}
+        {/* Hero Section — KK floats in the open left space */}
         <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-primary/15 via-accent/10 to-secondary/15">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 -translate-y-1/2 translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 translate-y-1/3 -translate-x-1/3" />
+
+          {/* Kalamity Kate in the left open space */}
+          <div className="absolute left-6 bottom-0 hidden xl:flex flex-col items-center pointer-events-none">
+            <img
+              src="https://raw.githubusercontent.com/lavenderlizzie/jumble.best/main/jumble_best_updated/apps/web/KALAMITY%20KATE%20(Logo).png"
+              alt="Kalamity Kate"
+              className="h-[220px] w-auto object-contain origin-bottom drop-shadow-xl"
+            />
+            <p className="text-sm font-black mt-1" style={{ color: '#ec4899' }}>Kalamity Kate</p>
+          </div>
 
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
             <motion.div
@@ -163,7 +171,7 @@ function HomePage() {
           </div>
         </section>
 
-        {/* ── FREE DOWNLOAD TEASER BANNER ── */}
+        {/* FREE DOWNLOAD TEASER BANNER */}
         <section className="py-10 bg-gradient-to-r from-primary via-primary to-secondary relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-40" />
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -214,9 +222,7 @@ function HomePage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-secondary/20 mb-6 shadow-inner">
                   <Shuffle className="w-8 h-8 text-secondary" />
                 </div>
-                <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
-                  Anagram Solver
-                </h2>
+                <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">Anagram Solver</h2>
                 <p className="body-text text-xl text-muted-foreground mb-8 font-medium">
                   Discover all the words you can make from a set of letters. Great for Scrabble, Wordle, Words with Friends, and other word games where you need to maximize your options.
                 </p>
@@ -226,9 +232,7 @@ function HomePage() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     {['silent', 'enlist', 'listen', 'inlets', 'tinsel'].map(word => (
-                      <span key={word} className="px-4 py-2 bg-secondary text-secondary-foreground rounded-xl text-base font-bold shadow-md shadow-secondary/20">
-                        {word}
-                      </span>
+                      <span key={word} className="px-4 py-2 bg-secondary text-secondary-foreground rounded-xl text-base font-bold shadow-md shadow-secondary/20">{word}</span>
                     ))}
                   </div>
                 </div>
@@ -237,22 +241,14 @@ function HomePage() {
           </div>
         </section>
 
-        {/* ── OUR DICTIONARY SECTION ── */}
+        {/* Our Dictionary Section */}
         <section className="py-24 bg-muted/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-primary/20 mb-6 shadow-inner -rotate-3">
                 <BookOpen className="w-10 h-10 text-primary rotate-3" />
               </div>
-              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-4">
-                Our Dictionary
-              </h2>
+              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-4">Our Dictionary</h2>
               <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium mb-4">
                 Over <span className="text-primary font-black">6,500 words</span> and growing — carefully curated across 12 categories so your results are always relevant, never obscure.
               </p>
@@ -263,33 +259,16 @@ function HomePage() {
                 🎯 <span className="font-bold text-foreground">Classic Jumble purist?</span> We've got every 5-letter word you need. <span className="font-bold text-foreground">Word game adventurer?</span> We go from 2 to 10+ letters — way beyond the classics.
               </p>
             </motion.div>
-
-            {/* Category Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
               {dictionaryCategories.map((cat, i) => (
-                <motion.div
-                  key={cat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="bg-card border-2 border-border rounded-2xl p-5 text-center hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                >
+                <motion.div key={cat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }} className="bg-card border-2 border-border rounded-2xl p-5 text-center hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="text-3xl mb-2">{cat.emoji}</div>
                   <p className="font-black text-foreground text-base mb-1">{cat.label}</p>
                   <p className="text-muted-foreground text-sm body-text">{cat.desc}</p>
                 </motion.div>
               ))}
             </div>
-
-            {/* Stats Row */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6"
-            >
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 { number: '6,500+', label: 'Total Words', color: 'text-primary' },
                 { number: '12', label: 'Categories', color: 'text-secondary' },
@@ -307,17 +286,10 @@ function HomePage() {
         {/* About Our Players Section */}
         <section id="about-our-players" className="py-24 bg-background">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
-                About Our Players
-              </h2>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">About Our Players</h2>
               <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium mb-10">
-                We're a community of word lovers — retired teachers, Scrabble champions, crossword addicts, and everyday players who believe a sharp mind is the best accessory at any age. Whether you play to win or just to keep the brain buzzing, you belong here.
+                We're a community of word lovers — retired teachers, Scrabble champions, crossword addicts, and everyday players who believe a sharp mind is the best accessory at any age.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
                 {[
@@ -332,46 +304,29 @@ function HomePage() {
                   </div>
                 ))}
               </div>
-              <Link
-                to="/about-our-players"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-black text-lg rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
+              <Link to="/about-our-players" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-black text-lg rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 Meet Our Community <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
           </div>
         </section>
 
-        {/* Random Question Feature Section */}
+        {/* Random Question Section */}
         <section id="random-questions" className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/10 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-accent/20 mb-6 shadow-inner rotate-3">
                 <Lightbulb className="w-10 h-10 text-accent -rotate-3" />
               </div>
-              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">
-                Take a Break
-              </h2>
+              <h2 className="hero-heading text-4xl md:text-5xl font-black text-foreground mb-6">Take a Break</h2>
               <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
-                Need a mental break from puzzles? Generate a random question to ponder. Choose between silly fun or thoughtful reflection.
+                Need a mental break from puzzles? Generate a random question to ponder.
               </p>
             </motion.div>
             <div className="max-w-4xl mx-auto">
               <RandomQuestion />
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-16 flex justify-center"
-            >
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="mt-16 flex justify-center">
               <GrandmaMascot message="These questions are a wonderful way to spark conversation with family and friends. Give it a try!" position="right" />
             </motion.div>
           </div>
@@ -383,15 +338,8 @@ function HomePage() {
         <section className="py-24 bg-primary text-primary-foreground mt-auto relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-50" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="hero-heading text-4xl md:text-6xl font-black mb-8 leading-tight">
-                Ready to become a word puzzle master?
-              </h2>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+              <h2 className="hero-heading text-4xl md:text-6xl font-black mb-8 leading-tight">Ready to become a word puzzle master?</h2>
               <p className="body-text text-2xl mb-10 opacity-90 font-medium max-w-2xl mx-auto">
                 All our tools are free and easy to use. No sign-up required. Start solving puzzles today!
               </p>
