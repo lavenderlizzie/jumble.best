@@ -126,7 +126,6 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
       alt="Kalamity Kate"
       className="h-[260px] w-auto object-contain drop-shadow-xl"
     />
-    <p className="text-sm font-black tracking-widest uppercase" style={{ color: '#ec4899' }}>Kalamity Kate</p>
   </motion.div>
 
   {/* Download Card — RIGHT side */}
