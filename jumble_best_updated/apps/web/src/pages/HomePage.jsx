@@ -10,6 +10,7 @@ import UnscrambleInput from '@/components/UnscrambleInput.jsx';
 import AnagramSolver from '@/components/AnagramSolver.jsx';
 import RandomQuestion from '@/components/RandomQuestion.jsx';
 import HelpSection from '@/components/HelpSection.jsx';
+import Stopwatch from '@/components/Stopwatch.jsx';
 import { Button } from '@/components/ui/button';
 
 const dictionaryCategories = [
@@ -79,6 +80,11 @@ function HomePage() {
             </div>
 
             <UnscrambleInput />
+
+            {/* Puzzle Timer */}
+            <div className="mt-4">
+              <Stopwatch />
+            </div>
 
             {/* Collapsible Newbies Section */}
             <div className="mt-6">
