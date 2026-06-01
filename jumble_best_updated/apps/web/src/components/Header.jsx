@@ -15,9 +15,9 @@ const navLinks = [
 { path: '/how-it-works', label: 'How It Works' },
 { path: '/about', label: 'About' },
 { path: '/', label: 'Quick Help', hash: '#help' },
-{ path: '/faq', label: 'FAQ' },{ path: '/faq', label: 'Free Download', hash: '#download' },
+{ path: '/faq', label: 'FAQ' },{ path: '/faq', label: 'Free Download', hash: '#download' },{ path: '/faq', label: 'Free Download', hash: '#download' },
 { path: '/faq', label: 'Feedback', hash: '#feedback' },
-{ path: '/faq', label: 'Feedback', hash: '#feedback' },
+
 { path: '/', label: 'Random Questions', hash: '#random-questions' },
 ];
 
