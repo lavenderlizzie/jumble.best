@@ -144,6 +144,13 @@ function FAQPage() {
               <p className="text-sm text-muted-foreground mt-5">
                 2 pages · Print-friendly · No sign-up · Works on any device
                 <p className="text-sm font-bold text-primary mt-2">
+                  <p className="text-sm text-muted-foreground mt-5">
+  2 pages · Print-friendly · No sign-up · Works on any device
+</p>
+
+<p className="text-sm font-bold text-primary mt-2">
+  🗓️ A New Release Every Month!
+</p>
   🗓️ A New Release Every Month!
 </p>
               </p>
