@@ -63,9 +63,7 @@ return <>
 <div className="p-4 bg-primary rounded-2xl shadow-lg shadow-primary/20 rotate-12">
 <HelpCircle className="w-10 h-10 text-primary-foreground -rotate-12" />
 </div>
-<h1 className="hero-heading text-5xl md:text-7xl font-black text-foreground">
-FAQ
-</h1>
+<h1 className="hero-heading text-5xl md:text-7xl font-black text-foreground">FAQ</h1>
 </div>
 <p className="body-text text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium">
 Find clear, bright answers to common questions about our word puzzle tools. Our feedback box is at the bottom of the page. We love to hear from our wordy friends.
@@ -80,9 +78,7 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 <div className="space-y-6">
 {faqs.map((faq, index) => <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.05 }} className={`bg-card rounded-2xl border-2 transition-all duration-300 overflow-hidden ${openIndex === index ? 'border-primary shadow-lg shadow-primary/10' : 'border-border shadow-sm hover:border-primary/40'}`}>
 <button onClick={() => toggleFAQ(index)} className="w-full px-8 py-6 flex items-center justify-between hover:bg-muted/30 transition-all duration-200 active:scale-[0.99]">
-<span className="font-black text-xl text-left text-card-foreground pr-8">
-{faq.question}
-</span>
+<span className="font-black text-xl text-left text-card-foreground pr-8">{faq.question}</span>
 <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${openIndex === index ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
 {openIndex === index ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
 </div>
@@ -108,12 +104,32 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 </div>
 </section>
 
-{/* ── FREE DOWNLOAD SECTION ── */}
+{/* FREE DOWNLOAD SECTION — KK on the LEFT */}
 <section id="download" className="py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex flex-col lg:flex-row items-center gap-12">
 
-  {/* Download Card */}
+  {/* Kalamity Kate — LEFT side */}
+  <motion.div
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    className="hidden lg:flex flex-col items-center gap-4 flex-shrink-0"
+  >
+    <div className="relative bg-accent text-accent-foreground px-5 py-3 rounded-3xl shadow-xl max-w-[220px] text-center font-bold text-sm border-2 border-accent-foreground/10">
+      "Go on, download it — Kalamity Kate approves!"
+      <div className="absolute -bottom-3 right-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[14px] border-t-accent border-r-[12px] border-r-transparent drop-shadow-md" />
+    </div>
+    <img
+      src="https://raw.githubusercontent.com/lavenderlizzie/jumble.best/main/jumble_best_updated/apps/web/KALAMITY%20KATE%20(Logo).png"
+      alt="Kalamity Kate"
+      className="h-[260px] w-auto object-contain drop-shadow-xl"
+    />
+    <p className="text-sm font-black tracking-widest uppercase" style={{ color: '#ec4899' }}>Kalamity Kate</p>
+  </motion.div>
+
+  {/* Download Card — RIGHT side */}
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -151,26 +167,6 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
     </p>
   </motion.div>
 
-  {/* Kalamity Kate */}
-  <motion.div
-    initial={{ opacity: 0, x: 30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6, delay: 0.2 }}
-    className="hidden lg:flex flex-col items-center gap-4 flex-shrink-0"
-  >
-    <div className="relative bg-accent text-accent-foreground px-5 py-3 rounded-3xl shadow-xl max-w-[220px] text-center font-bold text-sm border-2 border-accent-foreground/10">
-      "Go on, download it — Kalamity Kate approves!"
-      <div className="absolute -bottom-3 left-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[14px] border-t-accent border-r-[12px] border-r-transparent drop-shadow-md" />
-    </div>
-    <img
-      src="https://horizons-cdn.hostinger.com/9d0685b6-6057-4d84-99e1-dcfefe1c18f1/947c65278b32eda2302b918e33c4a7aa.png"
-      alt="Kalamity Kate"
-      className="h-[260px] w-auto object-contain drop-shadow-xl"
-    />
-    <p className="text-sm font-bold text-muted-foreground tracking-widest uppercase">Kalamity Kate</p>
-  </motion.div>
-
 </div>
 </div>
 </section>
@@ -182,9 +178,7 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-primary text-primary-foreground mb-8 shadow-xl shadow-primary/30 rotate-3">
 <MessageSquareHeart className="w-10 h-10 -rotate-3" />
 </div>
-<h2 className="hero-heading text-4xl md:text-6xl font-black text-foreground mb-6">
-We'd Love Your Feedback!
-</h2>
+<h2 className="hero-heading text-4xl md:text-6xl font-black text-foreground mb-6">We'd Love Your Feedback!</h2>
 <p className="body-text text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
 The Jumble.best team values your energetic suggestions. Whether you have an idea for a new feature, found a bug, or just want to say hello, please let us know!
 </p>
