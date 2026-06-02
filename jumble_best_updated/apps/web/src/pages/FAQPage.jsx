@@ -99,7 +99,7 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 <section className="py-24 bg-muted/40 border-y border-border/50">
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex justify-center">
-<GrandmaMascot message="Don't see your question here? That's perfectly fine! Just click around these bright buttons and you'll figure it out in no time." position="right" />
+<GrandmaMascot message="Don't see your question here? That's perfectly fine! Just click around these bright buttons and you'll figure it out in no time. Take a breath." position="right" />
 </motion.div>
 </div>
 </section>
@@ -128,6 +128,19 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
     />
   </motion.div>
 
+  {/* Kalamity Kate — mobile only */}
+  <div className="flex lg:hidden flex-col items-center gap-3">
+    <div className="relative bg-accent text-accent-foreground px-4 py-2 rounded-3xl shadow-xl max-w-[200px] text-center font-bold text-xs border-2 border-accent-foreground/10">
+      "If only I could unscramble me, wee, bitty brain. It's a word salad in here!"
+      <div className="absolute -bottom-3 right-10 w-0 h-0 border-l-[10px] border-l-transparent border-t-[12px] border-t-accent border-r-[10px] border-r-transparent drop-shadow-md" />
+    </div>
+    <img
+      src="https://raw.githubusercontent.com/lavenderlizzie/jumble.best/main/jumble_best_updated/apps/web/KALAMITY%20KATE%20(Logo).png"
+      alt="Kalamity Kate"
+      className="h-[140px] w-auto object-contain drop-shadow-xl"
+    />
+  </div>
+
   {/* Download Card — RIGHT side */}
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -146,7 +159,7 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
       <strong>Kalamity Kate's Top 50 Jumble Words That Fool Everyone</strong>
     </p>
     <p className="body-text text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-      Your 2-page cheat sheet with the trickiest Jumble words, solver hints, and fun facts about the puzzle game you love — totally free, no sign-up needed!
+      Your 2-page cheat sheet with the trickiest Jumble words, solver hints, and fun facts about the puzzle game you love — no sign-up needed!
     </p>
     <a
       href={PDF_URL}
