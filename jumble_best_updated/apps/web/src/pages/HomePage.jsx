@@ -131,12 +131,12 @@ function HomePage() {
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 -translate-y-1/2 translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 translate-y-1/3 -translate-x-1/3" />
 
-          {/* Kalamity Kate — upper right, below logo level */}
-          <div className="absolute right-6 top-8 hidden xl:flex flex-col items-center pointer-events-none">
+          {/* Kalamity Kate — upper left, below logo level */}
+          <div className="absolute left-6 top-8 hidden xl:flex flex-col items-center pointer-events-none">
             <img
               src="https://raw.githubusercontent.com/lavenderlizzie/jumble.best/main/jumble_best_updated/apps/web/KALAMITY%20KATE%20(Logo).png"
               alt="Kalamity Kate"
-              className="h-[280px] w-auto object-contain drop-shadow-xl"
+              className="h-[196px] w-auto object-contain drop-shadow-xl"
             />
           </div>
 
