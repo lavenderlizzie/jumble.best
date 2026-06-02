@@ -10,7 +10,6 @@ function HelpItem({
   colorClass = "primary"
 }) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
-
   const colorMap = {
     primary: "bg-primary text-primary-foreground shadow-primary/30",
     secondary: "bg-secondary text-secondary-foreground shadow-secondary/30"
@@ -40,7 +39,6 @@ function HelpItem({
           </motion.div>
         </div>
       </CollapsibleTrigger>
-
       <AnimatePresence initial={false}>
         {isOpen && <CollapsibleContent forceMount asChild>
             <motion.div initial={{
@@ -90,7 +88,6 @@ function HelpSection() {
             Got questions? We've got answers. Learn how to maximize your puzzle-solving skills. If you encounter any problems with our site, please use our feedback form under the FAQ tab at the bottom of the page.
           </p>
         </motion.div>
-
         <div className="space-y-6">
           <HelpItem title="How to use advanced options?" icon={Settings} colorClass="primary" defaultOpen={true}>
             <p className="mb-4 text-foreground font-medium">
@@ -107,11 +104,10 @@ function HelpSection() {
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span><strong>Starts/Ends With:</strong> (Coming soon) Pin specific letters to the beginning or end of your scrambled words to fit intersecting crossword tiles.</span>
+                <span><strong>Starts/Ends With:</strong> Pin specific letters to the beginning or end of your scrambled words to fit intersecting crossword tiles.</span>
               </li>
             </ul>
           </HelpItem>
-
           <HelpItem title="How does this work?" icon={Sparkles} colorClass="secondary">
             <p className="mb-4 text-foreground font-medium">
               Jumble.best uses a lightning-fast matching engine to solve your puzzles in milliseconds:
