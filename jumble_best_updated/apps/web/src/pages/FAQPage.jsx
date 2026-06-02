@@ -118,7 +118,7 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
     className="hidden lg:flex flex-col items-center gap-4 flex-shrink-0"
   >
     <div className="relative bg-accent text-accent-foreground px-5 py-3 rounded-3xl shadow-xl max-w-[220px] text-center font-bold text-sm border-2 border-accent-foreground/10">
-      "Go on, download it — Kalamity Kate approves!"
+      "If only I could unscramble me, wee, bitty brain. It's a word salad in here!"
       <div className="absolute -bottom-3 right-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[14px] border-t-accent border-r-[12px] border-r-transparent drop-shadow-md" />
     </div>
     <img
