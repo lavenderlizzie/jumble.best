@@ -75,7 +75,13 @@ function PrivacyPage() {
             },
             {
               title: "Contact Us",
-              content: "Questions? Concerns? Just want to say hi? Reach Kalamity Kate at: katkitlavender@gmail.com — we read every email!"
+              content: Questions? Concerns? Just want to say hi?{' '}
+<a href="/faq#feedback" className="text-primary font-bold underline underline-offset-2 hover:opacity-80 transition-opacity">
+  Use our Feedback form
+</a>{' '}
+— we read every message!
+
+
             },
           ].map((section, i) => (
             <motion.div
