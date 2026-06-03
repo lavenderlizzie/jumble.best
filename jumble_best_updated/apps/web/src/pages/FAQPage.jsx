@@ -191,15 +191,14 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 <p className="body-text text-lg text-muted-foreground font-medium mb-6">
   Get notified when new free downloads drop each month.
 </p>
-<script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message",function(e){if(e.origin=="https://www.signupanywhere.com"){var iframe=document.getElementById(e.data.id);iframe.setAttribute("scrolling","no");iframe.setAttribute("height",e.data.h);}});` }} />
-<iframe
-  src="https://www.signupanywhere.com/signup/7rvjs9fn"
-  width="100%"
-  height="400"
-  frameBorder="0"
-  id="suaform-7rvjs9fn"
-  title="Email signup"
-/>
+<a
+  href="https://www.signupanywhere.com/signup/7rvjs9fn"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 h-16 px-10 text-xl font-bold rounded-2xl bg-primary text-primary-foreground shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 active:scale-[0.98]"
+>
+  📬 Sign Me Up!
+</a>
 </motion.div>
 </div>
 </section>
