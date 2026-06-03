@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Heart, Users, Target, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import GrandmaMascot from '@/components/GrandmaMascot.jsx';
@@ -11,10 +12,8 @@ function AboutPage() {
         <title>Jumble.best - About Us</title>
         <meta name="description" content="Learn about Jumble.best, our mission to make word puzzles accessible and enjoyable for everyone, and the story behind our friendly tools." />
       </Helmet>
-
       <div className="min-h-screen bg-background">
         <Header />
-
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-accent/15 via-background to-primary/10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl -translate-y-1/2 -translate-x-1/2" />
@@ -38,7 +37,6 @@ function AboutPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Story Section */}
         <section className="py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +64,10 @@ function AboutPage() {
                   She wanted to create something different with her unique voice. A place where anyone could enjoy the timeless pleasure of solving word puzzles, but with a modern twist made especially for boomers and puzzle lovers the world over.
                 </p>
                 <p>
-                  Our tools are designed with bold clarity in mind. Large, readable text. High-contrast colors. No hidden menus or complicated features. Just pure,  word-solving fun. And we value your feedback. Contact us at the end of FAQs.
+                  Our tools are designed with bold clarity in mind. Large, readable text. High-contrast colors. No hidden menus or complicated features. Just pure, word-solving fun. We value your feedback —{' '}
+                  <Link to="/faq#feedback" className="text-primary font-bold underline underline-offset-2 hover:opacity-80 transition-opacity">
+                    contact us in the Feedback form
+                  </Link>.
                 </p>
                 <p>
                   Whether you're playing Scrabble with friends, Wordle, Jumble, or simply keeping your mind sharp, we're here to add a moment of amusement to your day. Think of us as your most enthusiastic companion in the world of wonderful words.
@@ -75,7 +76,6 @@ function AboutPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-24 bg-muted/40 border-y border-border/50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,6 @@ function AboutPage() {
                 The core principles that guide everything we do
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[{
               icon: Heart,
@@ -144,7 +143,6 @@ function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +174,6 @@ function AboutPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Grandma Section */}
         <section className="py-24 bg-muted/40 border-t border-border/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,7 +192,6 @@ function AboutPage() {
             </motion.div>
           </div>
         </section>
-
         <Footer />
       </div>
     </>;
