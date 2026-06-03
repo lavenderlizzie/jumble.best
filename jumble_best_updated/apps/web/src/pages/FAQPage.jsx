@@ -183,6 +183,27 @@ Find clear, bright answers to common questions about our word puzzle tools. Our 
 </div>
 </section>
 
+{/* Mailing List Signup Section */}
+<section className="py-16 bg-muted/40 border-y border-border/50">
+<div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+<h2 className="hero-heading text-2xl md:text-3xl font-black text-foreground mb-2">📬 Stay in the Loop!</h2>
+<p className="body-text text-lg text-muted-foreground font-medium mb-6">
+  Get notified when new free downloads drop each month.
+</p>
+<script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message",function(e){if(e.origin=="https://www.signupanywhere.com"){var iframe=document.getElementById(e.data.id);iframe.setAttribute("scrolling","no");iframe.setAttribute("height",e.data.h);}});` }} />
+<iframe
+  src="https://www.signupanywhere.com/signup/7rvjs9fn"
+  width="100%"
+  height="400"
+  frameBorder="0"
+  id="suaform-7rvjs9fn"
+  title="Email signup"
+/>
+</motion.div>
+</div>
+</section>
+
 {/* Feedback Section */}
 <section className="py-32 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
