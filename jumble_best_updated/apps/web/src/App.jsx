@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Routes, BrowserRouter as Router, useLocation } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import HowItWorksPage from './pages/HowItWorksPage.jsx';
@@ -10,9 +10,24 @@ import PrivacyPage from './pages/PrivacyPage.jsx';
 import TermsPage from './pages/TermsPage.jsx';
 import DictionaryPage from './pages/DictionaryPage.jsx';
 
+function CanonicalTag() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    let tag = document.querySelector('link[rel="canonical"]');
+    if (!tag) {
+      tag = document.createElement('link');
+      tag.setAttribute('rel', 'canonical');
+      document.head.appendChild(tag);
+    }
+    tag.setAttribute('href', `https://jumble.best${pathname}`);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <CanonicalTag />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
