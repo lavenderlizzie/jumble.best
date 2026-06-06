@@ -1,43 +1,28 @@
-import React, { useEffect } from 'react';
-import { Route, Routes, BrowserRouter as Router, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import HowItWorksPage from './pages/HowItWorksPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import AboutOurPlayersPage from './pages/AboutOurPlayersPage.jsx';
 import FAQPage from './pages/FAQPage.jsx';
+import DictionaryPage from './pages/DictionaryPage.jsx';
 import PrivacyPage from './pages/PrivacyPage.jsx';
 import TermsPage from './pages/TermsPage.jsx';
-import DictionaryPage from './pages/DictionaryPage.jsx';
-
-function CanonicalTag() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    let tag = document.querySelector('link[rel="canonical"]');
-    if (!tag) {
-      tag = document.createElement('link');
-      tag.setAttribute('rel', 'canonical');
-      document.head.appendChild(tag);
-    }
-    tag.setAttribute('href', `https://jumble.best${pathname}`);
-  }, [pathname]);
-  return null;
-}
 
 function App() {
   return (
     <Router>
-      <CanonicalTag />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/dictionary" element={<DictionaryPage />} />
         <Route path="/how-it-works" element={<HowItWorksPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/about-our-players" element={<AboutOurPlayersPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
-        <Route path="/dictionary" element={<DictionaryPage />} />
         <Route path="*" element={
           <div className="min-h-screen flex items-center justify-center bg-background">
             <div className="text-center px-4">
